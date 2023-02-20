@@ -10,6 +10,22 @@ public class baekjoon10951 {
 
         String str = "";
 
+        /**
+         * try-catch문으로도 해결할 수 있다. 하지만, IntelliJ에서는 에러가 발생한다.
+         *         while (true) {
+         *             try {
+         *                 String str = br.readLine();
+         *
+         *                 StringTokenizer st = new StringTokenizer(str);
+         *
+         *                 int A = Integer.parseInt(st.nextToken());
+         *                 int B = Integer.parseInt(st.nextToken());
+         *                 bw.write(A + B + "\n");
+         *             } catch (NullPointerException e) {
+         *                 break;
+         *             }
+         *         }
+         */
         // EOF 문제
         while ((str = br.readLine()) != null && !(str.isEmpty())) {
 
