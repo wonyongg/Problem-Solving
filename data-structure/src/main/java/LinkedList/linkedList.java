@@ -229,4 +229,34 @@ public class linkedList <E> {
         }
         return false;
     }
+
+    /**
+     * <div>
+     *     <h2>peekFirst 메서드</h2>
+     *     <h3>첫번째 노드를 반환하는 메서드</h3>
+     * </div>
+     * @return 첫번째 노드 or null
+     */
+    public E peekFirst() {
+        if (head == null) {
+            return null; // 빈 리스트인 경우
+        }
+
+        return head.data;
+    }
+
+    /**
+     * <div>
+     *     <h2>peekLast 메서드</h2>
+     *     <h3>마지막 노드를 반환하는 메서드</h3>
+     * </div>
+     * @return 마지막 노드 or null
+     */
+    public E peekLast() {
+        if (tail == null) {
+            return null; // 빈 리스트인 경우
+        }
+
+        return tail.data;
+    }
 }
