@@ -169,4 +169,64 @@ public class linkedList <E> {
         E removedNode = current.data; // 5
         return removedNode;
     }
+
+    /**
+     * <div>
+     *     <h2>remove 메서드</h2>
+     *     <h3>특정 노드를 삭제하는 메서드</h3>
+     *     <ol>
+     *         <li>헤드 포인터가 가리키는 노드(첫번째 노드)라면 removeFirst()로 삭제</li>
+     *         <li>테일 포인터가 가리키는 노드(마지막 노드)라면 removeLast()로 삭제</li>
+     *         <li>빈 리스트가 아니라면 while 문 수행, 빈 리스트라면 바로 null 리턴</li>
+     *     </ol>
+     * </div>
+     * @param object 삭제하고자 하는 노드의 데이터
+     * @return 삭제된 노드 or null
+     */
+    public E remove(E object) {
+        if (head.data.equals(object)) { // 1
+            return removeFirst();
+        }
+
+        if (tail.data.equals(object)) { // 2
+            return removeLast();
+        }
+
+        Node<E> current = head;
+        Node<E> previous = null;
+
+        while (current != null) { // 3
+            if (((Comparable<E>) object).compareTo(current.data) == 0) {
+                currentSize--;
+                previous.next = current.next;
+                return current.data;
+            }
+            previous = current;
+            current = current.next;
+        }
+        return null;
+    }
+
+    /**
+     * <div>
+     *     <h2>contains 메서드</h2>
+     *     <h3>특정 노드가 포함되었는지 확인하는 메서드</h3>
+     *     <ol>
+     *         <li>빈 리스트가 아니면 포인터가 이동하며 노드를 찾고 true 리턴, 없거나 빈 리스트라면 false 리턴</li>
+     *     </ol>
+     * </div>
+     * @param object
+     * @return
+     */
+    public boolean contains(E object) {
+        Node<E> current = head;
+
+        while (current != null) { // 1
+            if (((Comparable<E>) object).compareTo(current.data) == 0) {
+                return true;
+            }
+            current = current.next;
+        }
+        return false;
+    }
 }
