@@ -2,7 +2,7 @@ package LinkedList;
 
 import java.util.Comparator;
 
-public class linkedList <E> {
+public class LinkedList<E> {
     //노드 정의
     class Node<E> {
         E data; // 데이터
@@ -18,7 +18,7 @@ public class linkedList <E> {
     private Node<E> tail; // 테일 포인터
     private int currentSize;
 
-    public linkedList() { // 생성자
+    public LinkedList() { // 생성자
         head = tail = null;
     } // 빈 리스트
 
