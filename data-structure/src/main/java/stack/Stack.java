@@ -9,7 +9,7 @@ public class Stack<E> {
     private int pointer;
 
     /**
-     * 스택 생성시 초기 용량 설정 후 포인터는 0에 둠
+     * 스택 생성 시 초기 용량 설정 후 포인터는 0으로 설큐
      * @param capacity 용량
      */
     public Stack(int capacity) {
@@ -37,8 +37,8 @@ public class Stack<E> {
      * <div>
      *     <h2>pop 메서드</h2>
      *     <ol>
-     *         <li>스택에 가장 나중에 넣은 값(최신값)을 뺌</li>
      *         <li>point <= 0 (스택이 비어있다면) RuntimeException 던지기</li>
+     *         <li>스택에 가장 나중에 넣은 값(최신값)을 뺌</li>
      *     </ol>
      * </div>
      * @return 스택에서 뺀 값
@@ -152,8 +152,8 @@ public class Stack<E> {
      * <div>
      *     <h2>dump 메서드</h2>
      *     <ol>
+     *         <li>만약 pointer가 0과 같거나 작으면 스택이 비어있다는 뜻이므로 "Stack is Empty" 문장 출력</li>
      *         <li>스택 요소를 바닥부터 꼭대기 순서로 출력</li>
-     *         <li>만약 pointer가 0과 같거나 작으면 스택이 비어있다는 뜻이므로 Stack is Empty 문장 출력</li>
      *     </ol>
      * </div>
      */
