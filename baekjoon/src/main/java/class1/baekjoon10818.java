@@ -1,10 +1,13 @@
+package class1;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-
-public class Main {
+public class baekjoon10818 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -24,6 +27,3 @@ public class Main {
         System.out.println(intgerList.get(0) + " " + intgerList.get(intgerList.size()-1));
     }
 }
-/**
- * 통과 후 다음 사용을 위해 삭제!!
- */
