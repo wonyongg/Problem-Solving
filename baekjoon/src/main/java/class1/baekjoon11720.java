@@ -1,9 +1,11 @@
+package class1;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+public class baekjoon11720 {
 
-public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -21,6 +23,3 @@ public class Main {
         System.out.println(sum);
     }
 }
-/**
- * 통과 후 다음 사용을 위해 삭제!!
- */
