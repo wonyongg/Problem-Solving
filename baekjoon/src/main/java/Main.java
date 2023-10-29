@@ -7,18 +7,16 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int N = Integer.parseInt(br.readLine());
-
         String input = br.readLine();
-        String[] stringIntegerList = input.split("");
+        String[] stringIntegerList = input.split(" ");
 
         int sum = 0;
 
         for (String stringInteger : stringIntegerList) {
-            sum += Integer.valueOf(stringInteger);
+            sum += Math.pow(Integer.valueOf(stringInteger), 2);
         }
 
-        System.out.println(sum);
+        System.out.println(sum % 10);
     }
 }
 /**
