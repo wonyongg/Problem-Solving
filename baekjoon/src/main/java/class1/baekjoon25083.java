@@ -1,7 +1,10 @@
-import java.io.*;
+package class1;
 
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.OutputStreamWriter;
 
-public class Main {
+public class baekjoon25083 {
     public static void main(String[] args) throws IOException {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
@@ -15,6 +18,3 @@ public class Main {
         bw.close();
     }
 }
-/**
- * 통과 후 다음 사용을 위해 삭제!!
- */
