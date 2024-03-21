@@ -2,9 +2,9 @@ package dp;
 
 import java.io.*;
 
-public class baekjoon24417 {
+public class baekjoon24417_x {
 
-    static int recursiveFuncCount = 0;
+    static int tailRecursiveFuncCount = 0;
     static int fibonacciCount = 0;
 
     static int[] dp;
@@ -16,29 +16,27 @@ public class baekjoon24417 {
 
         int n = Integer.parseInt(br.readLine());
 
-        int init = 1;
-        int total = 0;
+        tailRecursiveFunc(n, 0, 1);
+        dp(n);
 
-        recursiveFunc(n, total, init);
-        fibonacci(n);
-
-        bw.write(String.valueOf((total + init) % 1000000007));
+        bw.write(String.valueOf(tailRecursiveFuncCount % 1000000007));
         bw.write(" ");
         bw.write(String.valueOf(fibonacciCount));
         bw.flush();
         bw.close();
     }
 
-    static int recursiveFunc(int n, int total, int init) {
+    static int tailRecursiveFunc(int n, int first, int second) {
 
-        if (n == 1 || n == 2) {
-            return init;
+        if (n <= 1) {
+            tailRecursiveFuncCount++;
+            return second;
         } else {
-            return recursiveFunc(n-1, init, total + init);
+            return tailRecursiveFunc(n-1, second, first + second);
         }
     }
 
-    static int fibonacci(int n) {
+    static int dp(int n) {
         if (n == 1 || n == 2) {
             fibonacciCount++;
             return 1;
